@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/estilo.css"/>
+    <script src="assets/java.js"></script>
+    <title>Formulario de Contacto</title>
+</head>
+<body>
+    <h1>Formulario de Contacto para agarrar al waton mauro</h1>
+    <button class="btnContraste" onclick="contraste()">Contraste</button>
+    <button class="btnFuente" onclick="fuente()">Fuente</button>
+    <form id="formulario">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" placeholder="Nombre">
+        <p id="pnombre" style="display: none; color: red;">Por favor ingresa tu nombre.</p>
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" placeholder="Apellido">
+        <p id="papellido" style="display: none; color: red;">Por favor ingresa tu apellido.</p>
+        <label for="rut">Rut</label>
+        <input type="text" id="rut" placeholder="RUT">
+        <p id="prut" style="display: none; color: red;">Por favor ingresa un RUT válido (10 dígitos).</p>
+        <label for="email">Email</label>
+        <input type="email" id="correo" placeholder="Correo electrónico">
+        <p id="pcorreo" style="display: none; color: red;">Por favor ingresa un correo electrónico válido.</p>
+        <label for="edad">Edad</label>
+        <input type="number" id="edad" placeholder="Edad">
+        <p id="pedad" style="display: none; color: red;">Por favor ingresa una edad válida (mayor a 0).</p>
+        <label for="direccion">Dirección</label>
+        <textarea id="direccion" placeholder="Dirección"></textarea>
+        <p id="pdireccion" style="display: none; color: red;">Por favor ingresa tu dirección.</p>
+        <select id="genero">
+            <option value="">Selecciona tu género</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+        </select>
+        <p id="pgenero" style="display: none; color: red;">Por favor selecciona tu género.</p>
+        <label>
+            <input type="checkbox" id="terminos">
+            Acepto los términos y condiciones
+        </label>
+        <p id="pterminos" style="display: none; color: red;">Por favor acepta los términos y condiciones.</p>
+        <button id="btnRegistrar" type="button" onclick="enviar()">Registrar</button>
+    </form>
+</body>
+</html>
