@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/estilo.css"/>
+    <script type="module" src="assets/firebase.js"></script>
     <script src="assets/java.js"></script>
+    <script type="module" src="assets/java2.js"></script>
     <title>Formulario de Contacto</title>
 </head>
 <body>
@@ -14,35 +16,54 @@
     <form id="formulario">
         <label for="nombre">Nombre</label>
         <input type="text" id="nombre" placeholder="Nombre">
-        <p id="pnombre" style="display: none; color: red;">Por favor ingresa tu nombre.</p>
+        <p id="pnombre" style="display: none; color: red;">ingresa tu nombre.</p>
         <label for="apellido">Apellido</label>
         <input type="text" id="apellido" placeholder="Apellido">
-        <p id="papellido" style="display: none; color: red;">Por favor ingresa tu apellido.</p>
+        <p id="papellido" style="display: none; color: red;">ingresa tu apellido.</p>
         <label for="rut">Rut</label>
         <input type="text" id="rut" placeholder="RUT">
-        <p id="prut" style="display: none; color: red;">Por favor ingresa un RUT válido (10 dígitos).</p>
+        <p id="prut" style="display: none; color: red;">ingresa un RUT válido (sin puntos y con guion).</p>
         <label for="email">Email</label>
         <input type="email" id="correo" placeholder="Correo electrónico">
-        <p id="pcorreo" style="display: none; color: red;">Por favor ingresa un correo electrónico válido.</p>
+        <p id="pcorreo" style="display: none; color: red;">ingresa un correo electrónico válido.</p>
         <label for="edad">Edad</label>
         <input type="number" id="edad" placeholder="Edad">
-        <p id="pedad" style="display: none; color: red;">Por favor ingresa una edad válida (mayor a 0).</p>
+        <p id="pedad" style="display: none; color: red;">ingresa una edad válida (mayor a 0).</p>
         <label for="direccion">Dirección</label>
         <textarea id="direccion" placeholder="Dirección"></textarea>
-        <p id="pdireccion" style="display: none; color: red;">Por favor ingresa tu dirección.</p>
+        <p id="pdireccion" style="display: none; color: red;">ingresa tu dirección.</p>
         <select id="genero">
             <option value="">Selecciona tu género</option>
             <option value="masculino">Masculino</option>
             <option value="femenino">Femenino</option>
             <option value="otro">Otro</option>
         </select>
-        <p id="pgenero" style="display: none; color: red;">Por favor selecciona tu género.</p>
+        <p id="pgenero" style="display: none; color: red;">selecciona tu género.</p>
         <label>
             <input type="checkbox" id="terminos">
             Acepto los términos y condiciones
         </label>
-        <p id="pterminos" style="display: none; color: red;">Por favor acepta los términos y condiciones.</p>
+        <p id="pterminos" style="display: none; color: red;">acepta los términos y condiciones.</p>
         <button id="btnRegistrar" type="button" onclick="enviar()">Registrar</button>
+        <button id="btnActualizar" type="button" onclick="actualizar()">Actualizar</button>
     </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>RUT</th>
+                <th>Correo</th>
+                <th>Edad</th>
+                <th>Dirección</th>
+                <th>Género</th>
+                <th>Actualizar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpotabla">
+        </tbody>
+    </table>
+
 </body>
 </html>
