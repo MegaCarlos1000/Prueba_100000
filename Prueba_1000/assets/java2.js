@@ -124,6 +124,12 @@ const cargarDatos = () => {
 
 // Funcion para actualizar
 const actualizar = () => {
+    // Verifica que las validaciones se cumplan
+    if (!validar()) {
+        console.log("No se actualiza");
+        return;
+    }
+
     // optiene valores de los campos formulario
     let eNombre = document.getElementById("nombre");
     let eApellido = document.getElementById("apellido");
